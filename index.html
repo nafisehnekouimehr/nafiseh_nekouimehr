@@ -1,217 +1,230 @@
 <!DOCTYPE html>
-
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>دکتر نفیسه نکویی مهر | استادیار حقوق عمومی | دانشگاه آزاد اسلامی واحد نجف‌آباد</title>
-<meta name="description" content="وب‌سایت رسمی دکتر نفیسه نکویی مهر، استادیار حقوق عمومی دانشگاه آزاد اسلامی واحد نجف‌آباد. مقالات، پژوهش‌ها و فعالیت‌های علمی.">
-<meta name="description" content="وب‌سایت رسمی دکتر نفیسه نکویی مهر، استادیار حقوق عمومی دانشگاه آزاد اسلامی واحد نجف‌آباد. مقالات، پژوهش‌ها، حقوق شهروندی، حقوق فضای مجازی و حقوق بشر.">
-<meta name="keywords" content="نفیسه نکویی مهر, دکتر نفیسه نکویی مهر, حقوق عمومی, دانشگاه آزاد نجف آباد, مقالات حقوقی, حقوق شهروندی, حقوق فضای مجازی">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="author" content="دکتر نفیسه نکویی مهر">
+<title>پورتفولیو شخصی</title>
 
-<meta property="og:title" content="دکتر نفیسه نکویی مهر">
-<meta property="og:description" content="استادیار حقوق عمومی دانشگاه آزاد اسلامی واحد نجف‌آباد">
-<meta property="og:type" content="website">
-<meta property="og:image" content="photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <style>
-
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-  background-image: url("background.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+    font-family:tahoma,sans-serif;
+    background:#0b2344;
+    color:white;
 }
 
-@keyframes gradientBG{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(11,35,68,.78),rgba(11,35,68,.78)),
+    url('background.jpg');
+    background-size:cover;
+    background-position:center;
+    position:relative;
 }
 
-header{
-  text-align:center;
-  padding:80px 20px;
-  color:white;
+.navbar{
+    width:100%;
+    padding:30px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.profile{
-  width:220px;
-  height:220px;
-  border-radius:50%;
-  object-fit:cover;
-  border:8px solid rgba(255,255,255,.8);
-  box-shadow:0 15px 40px rgba(0,0,0,.25);
-}
-<img src="photo.jpg"
-class="profile"
-alt="دکتر نفیسه نکویی مهر استادیار حقوق عمومی دانشگاه آزاد اسلامی واحد نجف آباد">
-header h1{
-  margin-top:20px;
-  font-size:42px;
+.logo{
+    color:#d4a75f;
+    font-size:28px;
+    font-weight:bold;
 }
 
-header p{
-  font-size:20px;
+.menu{
+    display:flex;
+    gap:40px;
+    list-style:none;
 }
 
-nav{
-  text-align:center;
-  margin:20px;
-}
-<nav>
-  <a href="index.html">خانه</a>
-  <a href="articles.html">مقالات</a>
-</nav>
-nav a{
-  color:white;
-  text-decoration:none;
-  margin:10px;
-  padding:12px 22px;
-  border-radius:30px;
-  background:rgba(255,255,255,.15);
-  backdrop-filter:blur(10px);
+.menu a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
 }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
+.menu a:hover{
+    color:#d4a75f;
+}
+
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    width:90%;
+    max-width:900px;
+}
+
+.hero-content h1{
+    font-size:72px;
+    margin-bottom:20px;
+}
+
+.hero-content h2{
+    color:#d4a75f;
+    font-size:34px;
+    margin-bottom:30px;
+}
+
+.hero-content p{
+    font-size:22px;
+    line-height:2;
+    margin-bottom:40px;
+}
+
+.btn{
+    background:#d4a75f;
+    color:#0b2344;
+    padding:18px 45px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.features{
+    background:#071a35;
+    padding:80px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
 }
 
 .card{
-  background:rgba(255,255,255,.20);
-  backdrop-filter:blur(15px);
-  border:1px solid rgba(255,255,255,.25);
-  border-radius:25px;
-  padding:30px;
-  margin:25px 0;
-  color:white;
-  box-shadow:0 8px 30px rgba(0,0,0,.15);
+    text-align:center;
+    padding:30px;
 }
 
-.card h2{
-  margin-bottom:15px;
+.icon{
+    width:80px;
+    height:80px;
+    border:1px solid #d4a75f;
+    border-radius:50%;
+    margin:auto;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    color:#d4a75f;
 }
 
-.card ul{
-  padding-right:25px;
+.card h3{
+    margin-bottom:15px;
 }
 
-.card li{
-  margin:10px 0;
+.card p{
+    color:#ddd;
+    line-height:1.8;
 }
 
-footer{
-  text-align:center;
-  color:white;
-  padding:30px;
+@media(max-width:768px){
+
+.menu{
+    display:none;
 }
 
+.hero-content h1{
+    font-size:42px;
+}
+
+.hero-content h2{
+    font-size:24px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+}
 </style>
 
 </head>
 <body>
 
-<header>
+<section class="hero">
 
-<img src="photo.jpg" class="profile">
+<nav class="navbar">
 
-<h1>دکتر نفیسه نکویی مهر</h1>
+<div class="logo">⚖ Portfolio</div>
 
-<p>استادیار حقوق عمومی</p>
+<ul class="menu">
+<li><a href="#">صفحه اصلی</a></li>
+<li><a href="#">درباره من</a></li>
+<li><a href="#">رزومه</a></li>
+<li><a href="#">پروژه‌ها</a></li>
+<li><a href="#">مقالات</a></li>
+<li><a href="#">تماس</a></li>
+</ul>
 
-<p>دانشگاه آزاد اسلامی واحد نجف‌آباد</p>
-
-</header>
-
-<nav>
-<a href="#about">معرفی</a>
-<a href="#research">پژوهش‌ها</a>
-<a href="#articles">مقالات</a>
-<a href="#contact">ارتباط</a>
 </nav>
 
-<div class="container">
+<div class="hero-content">
 
-<div class="card" id="about">
-<h2>معرفی</h2>
+<h1>نام شما</h1>
+
+<h2>توسعه دهنده Full Stack</h2>
 
 <p>
-دکتر نفیسه نکویی مهر، استادیار حقوق عمومی دانشگاه آزاد اسلامی واحد نجف‌آباد هستند. حوزه‌های علمی و پژوهشی ایشان شامل حقوق عمومی، حقوق شهروندی، حقوق فضای مجازی، حقوق بشر، حقوق زنان و مطالعات حقوقی مبتنی بر آموزه‌های اسلامی است.
+به وبسایت شخصی من خوش آمدید.
+نمونه کارها، پروژه‌ها و تجربیات حرفه‌ای من را در اینجا مشاهده کنید.
 </p>
 
-</div>
-
-<div class="card" id="research">
-
-<h2>زمینه‌های پژوهشی</h2>
-
-<ul>
-<li>حقوق عمومی</li>
-<li>حقوق شهروندی</li>
-<li>حقوق فضای مجازی</li>
-<li>حقوق بشر</li>
-<li>حقوق زنان و خانواده</li>
-<li>حقوق اداری</li>
-<li>حقوق اساسی</li>
-</ul>
+<a href="#" class="btn">
+مشاهده پروژه‌ها
+</a>
 
 </div>
 
-<div class="card" id="articles">
+</section>
 
-<h2>مقالات علمی</h2>
+<section class="features">
 
-<ul>
-
-<li>جامعه‌شناسی حقوق شهروند مجازی در وب تاریک (۱۴۰۱)</li>
-
-<li>حفظ حقوق شهروندی در فضای مجازی (۱۴۰۰)</li>
-
-<li>ابعاد حقوقی و قرآنی مبارزه با تروریسم مالی با محوریت حقوق بشر (۱۴۰۰)</li>
-
-<li>حق بر امنیت اجتماعی با تأکید بر آیات و روایات (۱۳۹۹)</li>
-
-<li>حق برخورداری از امنیت روانی با تأکید بر اندیشه‌های اسلامی عرفانی امام خمینی (ره) (۱۳۹۸)</li>
-
-<li>نقش دولت با محوریت اخلاق دینی در پیشگیری از نقض محرمانگی داده‌ها در فضای مجازی (۱۳۹۸)</li>
-
-<li>ابعاد حقوقی جرایم علیه عفت و اخلاق عمومی در فضای مجازی با محوریت قرآن (۱۳۹۷)</li>
-
-<li>واکاوی میزان و نقش باورهای مذهبی در حمایت از حقوق زنان با محوریت قانون حمایت از خانواده (۱۳۹۷)</li>
-
-</ul>
-
+<div class="card">
+<div class="icon">🎓</div>
+<h3>آموزش</h3>
+<p>تجربه تدریس و تولید محتوای آموزشی</p>
 </div>
 
-<div class="card" id="contact">
-
-<h2>ارتباط</h2>
-
-<p>دانشگاه آزاد اسلامی واحد نجف‌آباد</p>
-
-<p>گروه حقوق</p>
-
-<p>ایمیل دانشگاهی</p>
-
+<div class="card">
+<div class="icon">📚</div>
+<h3>مقالات</h3>
+<p>انتشار مقالات و مستندات تخصصی</p>
 </div>
 
+<div class="card">
+<div class="icon">💼</div>
+<h3>تجربه کاری</h3>
+<p>اجرای پروژه‌های حرفه‌ای و سازمانی</p>
 </div>
 
-<footer>
+<div class="card">
+<div class="icon">⭐</div>
+<h3>مهارت‌ها</h3>
+<p>طراحی وب، بک‌اند، DevOps و هوش مصنوعی</p>
+</div>
 
-© وب‌سایت رسمی دکتر نفیسه نکویی مهر
-
-</footer>
+</section>
 
 </body>
 </html>
