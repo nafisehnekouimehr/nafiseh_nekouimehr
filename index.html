@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>دکتر نفیسه نکویی مهر </title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>سایت شخصی من</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -18,36 +17,55 @@
 
 body{
     font-family:tahoma,sans-serif;
-    background:#0b2344;
-    color:white;
+    overflow-x:hidden;
 }
 
+/* عکس پروفایل */
+.profile{
+    position:fixed;
+    top:20px;
+    left:20px;
+    z-index:1000;
+}
+
+.profile img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #c9a15b;
+    box-shadow:0 0 20px rgba(201,161,91,.5);
+}
+
+/* صفحه اصلی */
 .hero{
+    width:100%;
     height:100vh;
+
     background:
-    linear-gradient(rgba(11,35,68,.78),rgba(11,35,68,.78)),
+    linear-gradient(
+    rgba(11,35,68,.75),
+    rgba(11,35,68,.75)
+    ),
     url('background.jpg');
+
     background-size:cover;
     background-position:center;
-    position:relative;
+    background-repeat:no-repeat;
+
+    display:flex;
+    flex-direction:column;
 }
 
+/* منو */
 .navbar{
     width:100%;
-    padding:30px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    color:#d4a75f;
-    font-size:28px;
-    font-weight:bold;
+    padding:30px 80px;
 }
 
 .menu{
     display:flex;
+    justify-content:flex-end;
     gap:40px;
     list-style:none;
 }
@@ -55,59 +73,66 @@ body{
 .menu a{
     color:white;
     text-decoration:none;
+    font-size:18px;
     transition:.3s;
 }
 
 .menu a:hover{
-    color:#d4a75f;
+    color:#c9a15b;
 }
 
+/* متن وسط صفحه */
 .hero-content{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    width:90%;
+    color:white;
+    padding:20px;
+}
+
+.content{
     max-width:900px;
 }
 
-.hero-content h1{
-    font-size:72px;
+.content h1{
+    font-size:70px;
     margin-bottom:20px;
 }
 
-.hero-content h2{
-    color:#d4a75f;
-    font-size:34px;
-    margin-bottom:30px;
+.content h2{
+    color:#c9a15b;
+    font-size:35px;
+    margin-bottom:25px;
 }
 
-.hero-content p{
+.content p{
     font-size:22px;
     line-height:2;
-    margin-bottom:40px;
+    margin-bottom:35px;
 }
 
 .btn{
-    background:#d4a75f;
+    display:inline-block;
+    background:#c9a15b;
     color:#0b2344;
-    padding:18px 45px;
+    padding:15px 40px;
     text-decoration:none;
     border-radius:8px;
     font-weight:bold;
-    transition:.3s;
 }
 
-.btn:hover{
-    transform:translateY(-3px);
-}
-
+/* بخش خدمات */
 .features{
-    background:#071a35;
-    padding:80px 8%;
+    background:#07182f;
+    color:white;
+    padding:80px 40px;
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
     gap:30px;
 }
 
@@ -119,73 +144,71 @@ body{
 .icon{
     width:80px;
     height:80px;
-    border:1px solid #d4a75f;
+    border:2px solid #c9a15b;
     border-radius:50%;
     margin:auto;
     margin-bottom:20px;
+
     display:flex;
-    justify-content:center;
     align-items:center;
-    font-size:30px;
-    color:#d4a75f;
+    justify-content:center;
+
+    font-size:35px;
 }
 
 .card h3{
     margin-bottom:15px;
+    color:#c9a15b;
 }
 
 .card p{
-    color:#ddd;
     line-height:1.8;
 }
 
+/* موبایل */
 @media(max-width:768px){
 
 .menu{
-    display:none;
+    gap:15px;
+    font-size:14px;
+    flex-wrap:wrap;
 }
 
-.hero-content h1{
-    font-size:42px;
+.content h1{
+    font-size:40px;
 }
 
-.hero-content h2{
+.content h2{
     font-size:24px;
 }
 
-.hero-content p{
+.content p{
     font-size:18px;
-}
-}
-    .profile{
-    position:absolute;
-    top:20px;
-    left:30px;
-    z-index:1000;
 }
 
 .profile img{
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid #d4a75f;
+    width:70px;
+    height:70px;
 }
-</style>
+}
 
+</style>
 </head>
+
 <body>
 
+<!-- عکس پروفایل -->
+<div class="profile">
+<img src="profile.jpg" alt="Profile">
+</div>
+
+<!-- صفحه اول -->
 <section class="hero">
 
 <nav class="navbar">
-<div class="profile">
-    <img src="profile.jpg" alt="Profile">
-</div>
-<div class="logo">⚖ Portfolio</div>
 
 <ul class="menu">
-<li><a href="#">صفحه اصلی</a></li>
+<li><a href="#">خانه</a></li>
 <li><a href="#">درباره من</a></li>
 <li><a href="#">رزومه</a></li>
 <li><a href="#">پروژه‌ها</a></li>
@@ -197,13 +220,15 @@ body{
 
 <div class="hero-content">
 
+<div class="content">
+
 <h1>نام شما</h1>
 
-<h2>توسعه دهنده Full Stack</h2>
+<h2>توسعه دهنده وب</h2>
 
 <p>
-به وبسایت شخصی من خوش آمدید.
-نمونه کارها، پروژه‌ها و تجربیات حرفه‌ای من را در اینجا مشاهده کنید.
+به وب‌سایت شخصی من خوش آمدید.
+در اینجا می‌توانید پروژه‌ها، مهارت‌ها و سوابق حرفه‌ای من را مشاهده کنید.
 </p>
 
 <a href="#" class="btn">
@@ -212,32 +237,34 @@ body{
 
 </div>
 
+</div>
+
 </section>
 
 <section class="features">
 
 <div class="card">
-<div class="icon">🎓</div>
-<h3>آموزش</h3>
-<p>تجربه تدریس و تولید محتوای آموزشی</p>
+<div class="icon">💼</div>
+<h3>نمونه کارها</h3>
+<p>پروژه‌های انجام شده و سوابق حرفه‌ای</p>
 </div>
 
 <div class="card">
 <div class="icon">📚</div>
 <h3>مقالات</h3>
-<p>انتشار مقالات و مستندات تخصصی</p>
+<p>محتواهای آموزشی و تخصصی</p>
 </div>
 
 <div class="card">
-<div class="icon">💼</div>
-<h3>تجربه کاری</h3>
-<p>اجرای پروژه‌های حرفه‌ای و سازمانی</p>
-</div>
-
-<div class="card">
-<div class="icon">⭐</div>
+<div class="icon">🚀</div>
 <h3>مهارت‌ها</h3>
-<p>طراحی وب، بک‌اند، DevOps و هوش مصنوعی</p>
+<p>برنامه‌نویسی، طراحی وب و فناوری</p>
+</div>
+
+<div class="card">
+<div class="icon">☎️</div>
+<h3>ارتباط</h3>
+<p>راه‌های تماس و همکاری</p>
 </div>
 
 </section>
