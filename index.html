@@ -14,7 +14,114 @@
     padding:0;
     box-sizing:border-box;
 }
- <section id="exam-section" style="padding:80px;background:#07182f;color:white;text-align:center;">
+<script>
+
+const questions = [
+
+{
+q:"اصل تفکیک قوا در کدام اصل قانون اساسی آمده است؟",
+options:["اصل ۵۶","اصل ۵۷","اصل ۵۸","اصل ۵۹"],
+answer:1
+},
+
+{
+q:"حاکمیت مطلق بر جهان و انسان از آن خداست مربوط به کدام اصل است؟",
+options:["اصل ۱","اصل ۲","اصل ۳","اصل ۴"],
+answer:1
+},
+
+{
+q:"رهبر توسط چه نهادی انتخاب می‌شود؟",
+options:["مجلس شورای اسلامی","شورای نگهبان","مجلس خبرگان رهبری","قوه قضاییه"],
+answer:2
+},
+
+{
+q:"قوه مقننه در ایران چگونه اعمال می‌شود؟",
+options:["مجلس شورای اسلامی","دولت","شوراها","دادگاه"],
+answer:0
+},
+
+{
+q:"نظارت بر انتخابات بر عهده کدام نهاد است؟",
+options:["دولت","شورای نگهبان","مجلس","قوه قضاییه"],
+answer:1
+}
+
+];
+
+
+function showQuiz(){
+
+document.getElementById("quiz-section").style.display="block";
+
+let html="";
+
+questions.forEach((item,index)=>{
+
+html += `
+<div style="margin:25px;padding:15px;background:white;border-radius:10px">
+
+<b>${index+1}- ${item.q}</b><br><br>
+
+${item.options.map((op,i)=>`
+
+<label>
+<input type="radio" name="q${index}" value="${i}">
+${op}
+</label><br>
+
+`).join("")}
+
+</div>
+`;
+
+});
+
+
+document.getElementById("quiz").innerHTML=html;
+
+document.getElementById("quiz-section")
+.scrollIntoView({behavior:"smooth"});
+
+}
+
+
+
+function showResult(){
+
+let score=0;
+
+
+questions.forEach((item,index)=>{
+
+let answer=document.querySelector(
+`input[name="q${index}"]:checked`
+);
+
+
+if(answer && Number(answer.value)==item.answer){
+score++;
+}
+
+});
+
+
+document.getElementById("result").innerHTML=
+
+`
+<h2>کارنامه آزمون</h2>
+<p>نمره شما: ${score} از ${questions.length}</p>
+`;
+
+}
+
+</script>  
+body{
+    font-family:tahoma,sans-serif;
+    overflow-x:hidden;
+}
+<section id="exam-section" style="padding:80px;background:#07182f;color:white;text-align:center;">
 
 <h2>مجموعه آزمون‌ها</h2>
 
@@ -23,6 +130,7 @@
 </a>
 
 </section>
+
 
 <section id="quiz-section" style="display:none;padding:60px;background:#f8f8f8">
 
@@ -40,49 +148,9 @@
 </button>
 </div>
 
-<br>
-
-<div id="result"></div>
+<div id="result" style="text-align:center;margin-top:30px"></div>
 
 </section>
-  <script>
-
-function showQuiz(){
-document.getElementById("quiz-section").style.display="block";
-
-document.getElementById("quiz").innerHTML=`
-<p><b>1- اصل تفکیک قوا در کدام اصل آمده است؟</b></p>
-<label><input type="radio" name="q1" value="0">56</label><br>
-<label><input type="radio" name="q1" value="1">57</label><br>
-<label><input type="radio" name="q1" value="2">58</label><br>
-<label><input type="radio" name="q1" value="3">59</label><br>
-`;
-
-document.getElementById("quiz-section")
-.scrollIntoView({behavior:"smooth"});
-}
-
-function showResult(){
-
-let score=0;
-
-let q1=document.querySelector('input[name="q1"]:checked');
-
-if(q1 && q1.value=="1"){
-score++;
-}
-
-document.getElementById("result").innerHTML=
-"<h2>کارنامه شما</h2><p>نمره: "+score+" از 1</p>";
-
-}
-
-</script>  
-body{
-    font-family:tahoma,sans-serif;
-    overflow-x:hidden;
-}
-
 /* عکس پروفایل */
 .profile{
     position:fixed;
